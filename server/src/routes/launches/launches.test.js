@@ -34,6 +34,5 @@ describe("Launches API", () => {
         .expect("Content-Type", /json/)
         .expect(201);
     });
-    test("It should catch missing properties", () => {});
   });
 });
