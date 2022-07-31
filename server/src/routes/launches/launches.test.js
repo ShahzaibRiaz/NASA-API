@@ -27,12 +27,7 @@ describe("Launches API", () => {
       const response = await request(app)
         .post("/v1/launches")
         .send({
-          launch: {
-            mission: "USS Enterprise Test",
-            rocket: "SpaceX",
-            target: "Kepler-62 f",
-            launchDate: "January 1, 2016",
-          },
+          launch: completeLaunchDate,
         })
         .expect("Content-Type", /json/)
         .expect(201);
